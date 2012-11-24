@@ -11,9 +11,6 @@ function testPhar(){
 }
 
 
-//This just doesn't work.
-//Phar::loadPhar("phar://phar2/phar1.phar", "phar1");
-
 /**
  * Extract phar1 to an external file and then load it.
  */
@@ -44,6 +41,11 @@ function extractAndLoadPhar(){
 include ('phar://phar2/src2.php');
 test2();
 
+
+//This just doesn't work.
+//Phar::loadPhar("phar://phar2/phar1.phar", "phar1");
+
+//So do this instead
 extractAndLoadPhar();
 
 //include ('phar://phar1/index1.php');
